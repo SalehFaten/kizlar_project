@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Button fx:id="login" layoutX="682.0" layoutY="32.0" mnemonicParsing="false" onAction="#log" prefHeight="31.0" prefWidth="74.0" text="Sign In">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="register" layoutX="595.0" layoutY="32.0" mnemonicParsing="false" onAction="#regist" text="Sign Up">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="search" alignment="BASELINE_LEFT" layoutX="150.0" layoutY="309.0" prefHeight="25.0" prefWidth="487.0" promptText="You Can Search Map by City Name , Discription , Location">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Text fontSmoothingType="LCD" layoutX="169.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To Map's  Web" textAlignment="CENTER" wrappingWidth="438.13671875">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Text>
+      <MenuButton fx:id="Citylist" layoutX="607.0" layoutY="309.0" mnemonicParsing="false" onAction="#Cityname" text="CityList" textAlignment="CENTER">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </MenuButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.signin">
+   <children>
+      <TextField fx:id="email" layoutX="212.0" layoutY="234.0" prefHeight="25.0" prefWidth="343.0" promptText="Email" />
+      <TextField fx:id="password" layoutX="212.0" layoutY="278.0" prefHeight="25.0" prefWidth="343.0" promptText="password" />
+      <Text layoutX="267.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in" textAlignment="CENTER" wrappingWidth="234.13671875">
+         <font>
+            <Font name="System Bold Italic" size="44.0" />
+         </font>
+      </Text>
+      <Button layoutX="331.0" layoutY="329.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="39.0" prefWidth="106.0" text="SignIn">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="43.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" text="back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.regist">
+   <children>
+      <TextField fx:id="Fistname" layoutX="211.0" layoutY="154.0" prefHeight="25.0" prefWidth="164.0" promptText="FirstName" />
+      <TextField fx:id="lastname" layoutX="383.0" layoutY="154.0" prefHeight="25.0" prefWidth="170.0" promptText="LastName" />
+      <TextField fx:id="mobile" layoutX="212.0" layoutY="195.0" prefHeight="25.0" prefWidth="343.0" promptText="Mobile Number" />
+      <TextField fx:id="email" layoutX="212.0" layoutY="234.0" prefHeight="25.0" prefWidth="343.0" promptText="Email" />
+      <TextField fx:id="password" layoutX="212.0" layoutY="278.0" prefHeight="25.0" prefWidth="343.0" promptText="password" />
+      <Text layoutX="258.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up" textAlignment="CENTER" wrappingWidth="234.13671875">
+         <font>
+            <Font name="System Bold Italic" size="44.0" />
+         </font>
+      </Text>
+      <TextField layoutX="210.0" layoutY="315.0" prefHeight="25.0" prefWidth="146.0" promptText="Visa Number" />
+      <TextField fx:id="CVV" layoutX="363.0" layoutY="315.0" prefHeight="6.0" prefWidth="60.0" promptText="CVV" />
+      <TextField fx:id="MM" layoutX="438.0" layoutY="315.0" prefHeight="10.0" prefWidth="117.0" promptText="MM/YY" />
+      <TextField fx:id="ID" layoutX="212.0" layoutY="349.0" prefHeight="25.0" prefWidth="343.0" promptText="ID" />
+      <Button layoutX="328.0" layoutY="390.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="39.0" prefWidth="106.0" text="SignUp">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="43.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" text="back" />
+   </children>
+</AnchorPane>
