@@ -53,8 +53,10 @@ public class Controller {
     }
 
     @FXML
-    void Cityname(ActionEvent event) {
-
+    void Cityname(ActionEvent event) { 
+    	
+    	
+    	
     }
 
 }

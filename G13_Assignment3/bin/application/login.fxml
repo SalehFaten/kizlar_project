@@ -15,7 +15,7 @@
             <Font name="System Bold Italic" size="44.0" />
          </font>
       </Text>
-      <Button layoutX="331.0" layoutY="329.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="106.0" text="SignIn">
+      <Button layoutX="331.0" layoutY="329.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="39.0" prefWidth="106.0" text="SignIn">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
