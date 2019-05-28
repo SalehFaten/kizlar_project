@@ -6,6 +6,8 @@ package application;
 
 import java.io.IOException;
 
+import application.Controller;
+import common.ChatIF;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +16,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import common .*;
 
-public class signin {
+public class signin  {
 
     @FXML // fx:id="password"
     private TextField password; // Value injected by FXMLLoader
@@ -30,6 +33,9 @@ public class signin {
          Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
          app_Stage.setScene(log);
          app_Stage.show();
+     	String input = email.getText();   //receive input from text field
+        Controller.client.handleMessageFromClientUI(input);  
+        
     }
     @FXML
     void back(ActionEvent event) throws IOException {
@@ -40,5 +46,6 @@ public class signin {
         app_Stage.show();
 
     }
+
 
 }
