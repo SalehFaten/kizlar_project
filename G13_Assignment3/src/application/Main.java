@@ -24,6 +24,7 @@ public class Main extends Application {
 	public static void main(String[] args) {
     	ServerConsole server = new ServerConsole(5555);
 		launch(args);
+		
 
 	}
 }

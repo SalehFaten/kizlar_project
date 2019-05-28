@@ -49,6 +49,7 @@ public  class Controller implements ChatIF {
         app_Stage.show();
     }
     
+    
     @FXML
     void Search(ActionEvent event) {
     	String input = search.getText();   //receive input from text field

@@ -35,6 +35,7 @@ public class signin  {
          app_Stage.show();
      	String input = email.getText();   //receive input from text field
         Controller.client.handleMessageFromClientUI(input);  
+        
     }
     @FXML
     void back(ActionEvent event) throws IOException {
