@@ -3,6 +3,7 @@
  */
 
 package application;
+import application.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
