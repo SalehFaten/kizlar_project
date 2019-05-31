@@ -27,7 +27,9 @@ public class regist {
 
     @FXML // fx:id="CVV"
     private TextField CVV; // Value injected by FXMLLoader
-
+    
+    @FXML
+    private TextField visa;
     @FXML // fx:id="mobile"
     private TextField mobile; // Value injected by FXMLLoader
 
@@ -45,11 +47,15 @@ public class regist {
 
     @FXML
     void SignUp(ActionEvent event) throws IOException {
-        Parent pane= FXMLLoader.load(getClass().getResource("Homepage.fxml"));
-        Scene log=new Scene(pane);
-        Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-        app_Stage.setScene(log);
-        app_Stage.show();
+    	
+    	String message="SignUp,"+email.getText()+","+password.getText()+","+Fistname.getText()+","+lastname.getText()+","+mobile.getText()+","+visa.getText()+","+CVV.getText()+","+MM.getText()+","+ID.getText()+","+"1";
+        Controller.client.handleMessageFromClientUI(message);  
+
+//        Parent pane= FXMLLoader.load(getClass().getResource("Homepage.fxml"));
+//        Scene log=new Scene(pane);
+//        Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+//        app_Stage.setScene(log);
+//        app_Stage.show();
     }
 
     @FXML

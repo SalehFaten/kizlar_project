@@ -11,7 +11,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.*;
 import ocsf.server.*;
 import common.*;
@@ -134,101 +133,59 @@ public void handleMessageFromClient
      }
      catch (IOException e) {}
      return;
-   }	
-   System.out.println(msg);
+   }	}
+   String [] detail=((String) msg).split(","); 
+   String command =detail[0];
+switch (command)
+{
+case "SignUp":
+	Statement stmt = null;
+	List<String> Email = new ArrayList<String>();
+	try {
+		stmt = conn.createStatement();
+		String sql = "SELECT * FROM CustomerCard";
+		ResultSet rs = stmt.executeQuery(sql);
+		while (rs.next()) {
+			Email.add(rs.getString("Email"));
+		}
 
-//   String massege;
-//	Statement stmt = null;
-//	List<String> names = new ArrayList<String>();
-//	try {
-//		stmt = conn.createStatement();
-//		String sql = "SELECT * FROM UserReport";
-//		ResultSet rs = stmt.executeQuery(sql);
-//		while (rs.next()) {
-//			names.add(rs.getString("UserName"));
-//		}
-//
-//		if (names.contains(msg)) {
-//			if (User == null) {
-//				PreparedStatement prep_stmt = conn
-//						.prepareStatement("SELECT * FROM UserReport  WHERE UserName=?");
-//				prep_stmt.setString(1, (String) msg);
-//				rs = prep_stmt.executeQuery();
-//				while (rs.next()) {
-//					User = rs.getString("UserName");
-//					massege = "Num of purchase for user name :" + rs.getString("UserName") + " is : "
-//							+ rs.getInt("NumOfPurch");
-//					client.sendToClient(massege);
-//					client.sendToClient("You can do any of represnted operations:");
-//					client.sendToClient("1.Show : If yot want to see your final updated details");
-//					client.sendToClient("2.Add  : If you want to purchese a new map");
-//					client.sendToClient("3.Exit : If you want to log out");
-//
-//				}
-//			} else if (!(msg.equals(User))) {
-//				client.sendToClient("If you want to connect from another user, please exit current user.");
-//
-//			}
-//
-//			else if (msg.equals(User)){
-//				client.sendToClient("You are already connected :)");
-//			}
-//		}
-//
-//		else if ((User != null) && (names.contains(User))) {
-//			if (msg.equals("Add")) {
-//
-//				PreparedStatement prep_stmt = conn
-//						.prepareStatement("UPDATE UserReport SET NumOfPurch=NumOfPurch + ? WHERE UserName=?");
-//				prep_stmt.setInt(1, 1);
-//				prep_stmt.setString(2, User);
-//				prep_stmt.executeUpdate();
-//				client.sendToClient("You add a new purchese to your purcheses ");
-//			} else if (msg.equals("Show")) {
-//				PreparedStatement prep_stmt = conn
-//						.prepareStatement("SELECT * FROM UserReport  WHERE UserName=?");
-//				prep_stmt.setString(1, User);
-//				ResultSet rs1 = prep_stmt.executeQuery();
-//				while (rs1.next()) {
-//					client.sendToClient("Details about the user name : "+rs1.getString("UserName")+ " is: ");
-//					client.sendToClient("FirstName: "+ rs1.getString("FirstName"));
-//					client.sendToClient("LastName: "+rs1.getString("LastName"));
-//					client.sendToClient("Tel: "+rs1.getString("Tel"));
-//					client.sendToClient("Email: "+rs1.getString("Email"));
-//					client.sendToClient("NumOfPurch: " + rs1.getInt("NumOfPurch"));
-//				}
-//
-//			} else if (msg.equals("Exit")) {
-//				User= null;
-//				client.sendToClient("You are logged out :( ");
-//			}
-//
-//			else {
-//				client.sendToClient("You can do just any of represnted operations:");
-//				client.sendToClient("1.Show : If yot want to see your final updated details");
-//				client.sendToClient("2.Add  : If you want to purchese a new map");
-//				client.sendToClient("3.Exit : If you want to log out");
-//
-//			}
-//
-//		} else {
-//
-//			client.sendToClient("Please try again ! Enter your user name");
-//		}
-//
-//	} catch (SQLException se) {
-//		se.printStackTrace();
-//		System.out.println("SQLException: " + se.getMessage());
-//		System.out.println("SQLState: " + se.getSQLState());
-//		System.out.println("VendorError: " + se.getErrorCode());
-//	} catch (Exception e) {
-//		e.printStackTrace();
-//	}
-   System.out.println("Message received: " + msg + " from \"" + 
-     client.getInfo("loginID") + "\" " + client);
+		if (Email.contains(detail[1])) {
+	
+			client.sendToClient("You are already registed ");
+
+		}
+		else 
+		{	   
+				PreparedStatement prep_stmt = conn
+						.prepareStatement("INSERT INTO CustomerCard "+"VALUES(?, ?, ?,?, ?, ?, ?, ?, ?, '1')");
+				prep_stmt.setString(1, detail[1]);
+				prep_stmt.setString(2, detail[2]);
+				prep_stmt.setString(3, detail[3]);
+				prep_stmt.setString(4, detail[4]);
+				prep_stmt.setString(5, detail[5]);
+				prep_stmt.setString(6, detail[6]);
+				prep_stmt.setString(7, detail[7]);
+				prep_stmt.setString(8, detail[8]);
+				prep_stmt.setString(9, detail[9]);
+				prep_stmt.executeUpdate();
+				client.sendToClient("You are registed ");
+					  
+		}	
+			 
+	} catch (SQLException se) {
+		se.printStackTrace();
+		System.out.println("SQLException: " + se.getMessage());
+		System.out.println("SQLState: " + se.getSQLState());
+		System.out.println("VendorError: " + se.getErrorCode());
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+//   System.out.println("Message received: " + msg + " from \"" + 
+//     client.getInfo("loginID") + "\" " + client);
 //   this.sendToAllClients(client.getInfo("loginID") + "> " + msg);
  }
-}
+
 
 /**
 * This method handles all data coming from the UI
