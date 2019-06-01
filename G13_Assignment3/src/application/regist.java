@@ -4,7 +4,7 @@
  */
 
 package application;
-import application.Controller;
+import application.Connect;
 
 import java.io.IOException;
 
@@ -49,13 +49,16 @@ public class regist {
     void SignUp(ActionEvent event) throws IOException {
     	
     	String message="SignUp,"+email.getText()+","+password.getText()+","+Fistname.getText()+","+lastname.getText()+","+mobile.getText()+","+visa.getText()+","+CVV.getText()+","+MM.getText()+","+ID.getText()+","+"1";
-        Controller.client.handleMessageFromClientUI(message);  
-
-//        Parent pane= FXMLLoader.load(getClass().getResource("Homepage.fxml"));
-//        Scene log=new Scene(pane);
-//        Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-//        app_Stage.setScene(log);
-//        app_Stage.show();
+        Connect.client.handleMessageFromClientUI(message);
+        System.out.println(Connect.client.servermsg);
+        if (Connect.client.servermsg.equals("SignUp")) 
+{
+        Parent pane= FXMLLoader.load(getClass().getResource("Homepage.fxml"));
+        Scene log=new Scene(pane);
+        Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        app_Stage.setScene(log);
+        app_Stage.show();
+}
     }
 
     @FXML

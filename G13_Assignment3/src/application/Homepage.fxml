@@ -25,7 +25,7 @@
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
-      <TextField fx:id="search" alignment="BASELINE_LEFT" layoutX="150.0" layoutY="309.0" onAction="#Search" prefHeight="25.0" prefWidth="487.0" promptText="You Can Search Map by City Name , Discription , Location">
+      <TextField fx:id="search" alignment="BASELINE_LEFT" layoutX="150.0" layoutY="285.0" onAction="#Search" prefHeight="25.0" prefWidth="487.0" promptText="You Can Search Map by City Name , Discription , Location">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
@@ -35,15 +35,5 @@
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Text>
-      <MenuButton fx:id="Citylist" layoutX="607.0" layoutY="309.0" mnemonicParsing="false" onAction="#Cityname" text="CityList" textAlignment="CENTER">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </MenuButton>
-      <TextField fx:id="host" layoutX="76.0" layoutY="389.0" onAction="#host" />
    </children>
 </AnchorPane>

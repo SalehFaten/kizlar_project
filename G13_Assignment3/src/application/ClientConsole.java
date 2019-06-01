@@ -119,20 +119,7 @@ public void accept()
 
 
 
-//  //Class methods ***************************************************
-//	public void start(Stage primaryStage) throws IOException {
-//		// constructing our scene
-//		URL url = getClass().getResource("Homepage.fxml");
-//		AnchorPane pane = FXMLLoader.load( url );
-//		Scene scene = new Scene( pane );
-//		// setting the stage
-//		primaryStage.setScene( scene );
-//		primaryStage.show();
-//		
-//	
-//
-//		
-//		}
+
   /**
    * This method is responsible for the creation of the Client UI.
    *

@@ -6,7 +6,7 @@ package application;
 
 import java.io.IOException;
 
-import application.Controller;
+import application.Connect;
 import common.ChatIF;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,13 +28,16 @@ public class signin  {
     
     @FXML
     void SignIn(ActionEvent event) throws IOException {
+    	String message="SignIn,"+email.getText()+","+password.getText();
+        Connect.client.handleMessageFromClientUI(message);
+        System.out.println(Connect.client.servermsg);
+        if (Connect.client.servermsg.equals("SignIn")) {
     	 Parent pane= FXMLLoader.load(getClass().getResource("Mymaps.fxml"));
          Scene log=new Scene(pane);
          Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
          app_Stage.setScene(log);
          app_Stage.show();
-     	String input = email.getText();   //receive input from text field
-        Controller.client.handleMessageFromClientUI(input);  
+        }
         
     }
     @FXML

@@ -13,7 +13,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		// constructing our scene
-		URL url = getClass().getResource("Homepage.fxml");
+		URL url = getClass().getResource("connect.fxml");
 		AnchorPane pane = FXMLLoader.load( url );
 		Scene scene = new Scene( pane );
 		// setting the stage
@@ -22,7 +22,6 @@ public class Main extends Application {
 				
 		}	
 	public static void main(String[] args) {
-    	ServerConsole server = new ServerConsole(5555);
 		launch(args);
 		
 

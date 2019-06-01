@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Connect">
+   <children>
+      <Text layoutX="268.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome" textAlignment="CENTER" wrappingWidth="234.13671875">
+         <font>
+            <Font name="System Bold Italic" size="44.0" />
+         </font>
+      </Text>
+      <Button fx:id="server" layoutX="245.0" layoutY="224.0" mnemonicParsing="false" onAction="#connectserver" prefHeight="39.0" prefWidth="295.0" text="click to connect as server">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="246.0" layoutY="286.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="295.0" text="write host to connect as Client">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="conclient" layoutX="246.0" layoutY="353.0" onAction="#connectclient" prefHeight="25.0" prefWidth="295.0" promptText="host number" />
+   </children>
+</AnchorPane>

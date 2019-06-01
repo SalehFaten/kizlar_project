@@ -36,7 +36,7 @@ final public static int DEFAULT_PORT = 5555;
 * The instance of the server that created this EchoServer.
 */
 EchoServer server;
-
+//public String servermsg=null;
 
 //Constructors ****************************************************
 
@@ -104,7 +104,7 @@ public void accept()
 */
 public void display(String message) 
 {
- System.out.println("> " + message);
+// System.out.println("> " + message);
 }
 
 
