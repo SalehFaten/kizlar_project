@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddMapToCity">
+   <children>
+      <TextField fx:id="enterCityName" alignment="CENTER" layoutX="334.0" layoutY="96.0" onAction="#enterCityNameToAddMap" promptText="Enter City Name" />
+      <TextField fx:id="pathToNewMap" alignment="CENTER" layoutX="104.0" layoutY="179.0" onAction="#enterPathToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Path To The New Map" />
+      <Button fx:id="addMapToCity_btn" layoutX="393.0" layoutY="411.0" mnemonicParsing="false" onAction="#addMapToCity_btn" text="Add" />
+      <TextField fx:id="descriptionToNewMap" alignment="CENTER" layoutX="105.0" layoutY="271.0" onAction="#descriptionToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Description To The New Map" />
+      <TextField fx:id="VersionNumToNewMap" alignment="CENTER" layoutX="437.0" layoutY="272.0" onAction="#VersionNumToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Version Num " />
+      <TextField fx:id="IdToNewMap" alignment="CENTER" layoutX="435.0" layoutY="179.0" onAction="#IdToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Map Id" />
+   </children>
+</AnchorPane>
