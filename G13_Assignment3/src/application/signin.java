@@ -28,6 +28,7 @@ public class signin  {
     
     @FXML
     void SignIn(ActionEvent event) throws IOException {
+
     	String message="SignIn,"+email.getText()+","+password.getText();
         Connect.client.handleMessageFromClientUI(message);
         System.out.println(Connect.client.servermsg);

@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import common .*;
 public class Main extends Application {
-	@Override
+	@Override 
 	public void start(Stage primaryStage) throws IOException {
 		// constructing our scene
 		URL url = getClass().getResource("connect.fxml");
