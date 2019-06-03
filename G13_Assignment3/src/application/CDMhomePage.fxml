@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CDMhomePage">
+   <children>
+      <Button fx:id="outCDMHome" layoutX="672.0" layoutY="58.0" mnemonicParsing="false" onAction="#LogOut" text="LogOut" />
+      <Button fx:id="CDaddMapToCity" layoutX="124.0" layoutY="275.0" mnemonicParsing="false" onAction="#CDaddMapToCity" prefHeight="25.0" prefWidth="189.0" text="Add Map To City" />
+      <Button fx:id="CDSeeMaps" layoutX="128.0" layoutY="181.0" mnemonicParsing="false" onAction="#CDSeeMaps" prefHeight="25.0" prefWidth="189.0" text="See Maps" />
+      <Button fx:id="CDcreateCity" layoutX="124.0" layoutY="224.0" mnemonicParsing="false" onAction="#CDcreateCity" prefHeight="25.0" prefWidth="189.0" text="Create City" />
+      <Button fx:id="CDeditInterestingPlace" layoutX="424.0" layoutY="328.0" mnemonicParsing="false" onAction="#CDeditInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Edit Interesting Place" />
+      <Button fx:id="CDaddInterestingPlace" layoutX="424.0" layoutY="274.0" mnemonicParsing="false" onAction="#CDaddInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Add Interesting Place" />
+      <Button fx:id="CDeditPath" layoutX="424.0" layoutY="226.0" mnemonicParsing="false" onAction="#CDeditPath" prefHeight="25.0" prefWidth="189.0" text="Edit Path" />
+      <Button fx:id="CDaddPath" layoutX="424.0" layoutY="181.0" mnemonicParsing="false" onAction="#CDaddPath" prefHeight="25.0" prefWidth="189.0" text="Add Path" />
+      <Button fx:id="CDacceptVersion" layoutX="270.0" layoutY="403.0" mnemonicParsing="false" onAction="#CDacceptVersion" prefHeight="25.0" prefWidth="189.0" text="Accept Version" />
+      <Button fx:id="CDchangePrice" layoutX="124.0" layoutY="327.0" mnemonicParsing="false" onAction="#CDchangePrice" prefHeight="25.0" prefWidth="189.0" text="Change Price" />
+   </children>
+</AnchorPane>
