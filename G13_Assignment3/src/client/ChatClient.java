@@ -26,12 +26,11 @@ public class ChatClient extends AbstractClient
    * the display method in the client.
    */
   ChatIF clientUI; 
-
   /**
    * The Login ID of the user.
    */
   String loginID;
-
+ public String servermsg=null;
   
   //Constructors ****************************************************
   
@@ -83,6 +82,7 @@ public class ChatClient extends AbstractClient
   public void handleMessageFromServer(Object msg) 
   {
     clientUI.display(msg.toString());
+    servermsg=msg.toString();
   }
 
    /**
@@ -97,6 +97,7 @@ public class ChatClient extends AbstractClient
     {
       runCommand(message);
     }
+  
     else
     {
       try

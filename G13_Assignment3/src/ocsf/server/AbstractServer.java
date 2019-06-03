@@ -65,7 +65,7 @@ public abstract class AbstractServer implements Runnable
    * can be waiting to connect.
    * Set to 10 by default.
    */
-  private int backlog = 10;
+  private int backlog = 100;
 
   /**
    * The thread group associated with client threads. Each member of the

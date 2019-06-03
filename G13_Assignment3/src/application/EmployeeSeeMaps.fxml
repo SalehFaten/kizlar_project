@@ -7,14 +7,22 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmployeeSeeMaps">
+<AnchorPane prefHeight="568.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmployeeSeeMaps">
    <children>
-      <Text fontSmoothingType="LCD" layoutX="164.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee See Maps" textAlignment="CENTER" wrappingWidth="438.13671875">
+      <ImageView fitHeight="568.0" fitWidth="919.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../world-map-background-copy.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="MapImage" fitHeight="299.0" fitWidth="420.0" layoutX="245.0" layoutY="234.0" onDragDetected="#MapImage" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="SearchMapId" layoutX="364.0" layoutY="171.0" onAction="#SearchMapId" prefHeight="31.0" prefWidth="196.0" promptText="Search Map Id" />
+      <Text fontSmoothingType="LCD" layoutX="236.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee See Maps" textAlignment="CENTER" wrappingWidth="438.13671875">
          <font>
-            <Font name="System Bold Italic" size="36.0" />
+            <Font name="Comic Sans MS Bold Italic" size="36.0" />
          </font>
       </Text>
-      <TextField fx:id="SearchMapId" layoutX="276.0" layoutY="151.0" onAction="#SearchMapId" promptText="Search Map Id" />
-      <ImageView fx:id="MapImage" fitHeight="299.0" fitWidth="420.0" layoutX="173.0" layoutY="220.0" onDragDetected="#MapImage" pickOnBounds="true" preserveRatio="true" />
-   </children>
-</AnchorPane>
+      <Button layoutX="73.0" layoutY="60.0" mnemonicParsing="false" onAction="#back" text="back">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+      </Button>

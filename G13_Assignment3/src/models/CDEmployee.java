@@ -1,6 +1,7 @@
 package models;
 
 public class CDEmployee extends Employee{
+
 	/*
 	
 	

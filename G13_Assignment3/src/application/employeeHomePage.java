@@ -5,6 +5,7 @@
 package application;
 
 import java.io.IOException;
+import javax.swing.JOptionPane;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,6 +46,12 @@ public class employeeHomePage {
 
     @FXML
     void LogOut(ActionEvent event) throws IOException{
+    	JOptionPane.showMessageDialog(null, "You are logout ");
+    	 Parent pane= FXMLLoader.load(getClass().getResource("Homepage.fxml"));
+         Scene log=new Scene(pane);
+         Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+         app_Stage.setScene(log);
+         app_Stage.show();
 
     }
 
