@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.AddPath">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="556.0" prefWidth="786.0">
+         <children>
+            <TextField fx:id="enterPathName" layoutX="90.0" layoutY="145.0" onAction="#enterPathName" promptText="Enter path name" />
+            <TextField fx:id="enterDiscription" layoutX="90.0" layoutY="234.0" onAction="#enterDiscription" promptText="Enter discription" />
+            <TextField fx:id="enterPathToNewPath" layoutX="490.0" layoutY="145.0" onAction="#enterPathToNewPath" prefHeight="31.0" prefWidth="196.0" promptText="Enter path to the new path" />
+            <TextField fx:id="enterCityId" layoutX="490.0" layoutY="234.0" onAction="#enterCityId" prefHeight="31.0" prefWidth="196.0" promptText="Enter cityId" />
+            <Button fx:id="AddPathbtn" layoutX="328.0" layoutY="343.0" mnemonicParsing="false" onAction="#AddPathbtn" prefHeight="31.0" prefWidth="94.0" text="Add" />
+            <Text fontSmoothingType="LCD" layoutX="156.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Path" textAlignment="CENTER" wrappingWidth="438.13671875">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
