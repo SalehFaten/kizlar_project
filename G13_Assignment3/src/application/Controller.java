@@ -19,17 +19,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import client .*;
 import common.ChatIF;
-import application.Main;
-public  class Controller implements ChatIF {
+import application.Connect;
+public  class Controller  {
 
-	  static ChatClient client=null;
+//	  static ChatClient client=null;
 //	ServerConsole server=null;
 //	private AnchorPane rootPane;
     @FXML // fx:id="search"
     private TextField search; // Value injected by FXMLLoader
-
-    @FXML // fx:id="Citylist"
-    private MenuButton Citylist; // Value injected by FXMLLoader
 
     @FXML // fx:id="login"
     private Button login; // Value injected by FXMLLoader
@@ -37,8 +34,6 @@ public  class Controller implements ChatIF {
     @FXML // fx:id="register"
     private Button register; // Value injected by FXMLLoader
 
-    @FXML
-    private TextField host;
 
     @FXML
     void log(ActionEvent event) throws IOException {
@@ -52,10 +47,8 @@ public  class Controller implements ChatIF {
     
     @FXML
     void Search(ActionEvent event) {
-    	String input = search.getText();   //receive input from text field
-//         System.out.println(input);
-       client.handleMessageFromClientUI(input);  
-
+    	String message="PublicSearch,"+search.getText();
+       Connect.client.handleMessageFromClientUI(message);  
     }
 
     @FXML
@@ -68,23 +61,9 @@ public  class Controller implements ChatIF {
     
     }
 
-    @FXML
-    void Cityname(ActionEvent event) { 
-    	    	
-    	
-    }
-    @FXML
-    void host(ActionEvent event) throws IOException {
-    	System.out.println(host.getText());
-       client = new ChatClient("doha",host.getText(),5555,this);
-    	
-    }
 
-	@Override
-	public void display(String message) {
-    	System.out.println(message);
+ 
 
-	}
 
 
 }
