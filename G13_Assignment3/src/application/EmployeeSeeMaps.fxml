@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmployeeSeeMaps">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="164.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee See Maps" textAlignment="CENTER" wrappingWidth="438.13671875">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="SearchMapId" layoutX="276.0" layoutY="151.0" onAction="#SearchMapId" promptText="Search Map Id" />
+      <ImageView fx:id="MapImage" fitHeight="299.0" fitWidth="420.0" layoutX="173.0" layoutY="220.0" onDragDetected="#MapImage" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
