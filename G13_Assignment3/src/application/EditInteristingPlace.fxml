@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.EditInteristingPlace">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="556.0" prefWidth="786.0">
+         <children>
+            <Button fx:id="Editbtn" layoutX="339.0" layoutY="396.0" mnemonicParsing="false" onAction="#Editbtn" prefHeight="31.0" prefWidth="77.0" text="Edit">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Text fontSmoothingType="LCD" layoutX="169.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Interesting Place" textAlignment="CENTER" wrappingWidth="438.13671875">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Text>
+            <TextField fx:id="EditDescription" layoutX="65.0" layoutY="195.0" onAction="#EditDescription" promptText="Edit Description" />
+            <TextField fx:id="EditLocation" layoutX="65.0" layoutY="247.0" onAction="#EditLocation" promptText="Edit Location" />
+            <TextField fx:id="EditPlaceName" layoutX="482.0" layoutY="195.0" onAction="#EditPlaceName" promptText="Edit Place Name" />
+            <TextField fx:id="EditPath" layoutX="65.0" layoutY="304.0" onAction="#EditPath" promptText="Edit path to the place" />
+            <TextField fx:id="EditRecomendedTime" layoutX="482.0" layoutY="263.0" onAction="#EditRecomendedTime" promptText="Edit Recomended Time" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
