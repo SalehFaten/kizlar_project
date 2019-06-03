@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.image.*?>
+
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -54,5 +55,6 @@
             <Font name="Comic Sans MS Bold Italic" size="15.0" />
          </font>
       </Button>
+
    </children>
 </AnchorPane>

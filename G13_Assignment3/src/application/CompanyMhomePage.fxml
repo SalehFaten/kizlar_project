@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CDMhomePage">
+   <children>
+      <Button fx:id="outCDMHome" layoutX="672.0" layoutY="58.0" mnemonicParsing="false" onAction="#LogOut" text="LogOut" />
+      <Button fx:id="CMaddMapToCity" layoutX="120.0" layoutY="260.0" mnemonicParsing="false" onAction="#CMaddMapToCity" prefHeight="25.0" prefWidth="189.0" text="Add Map To City" />
+      <Button fx:id="CMSeeMaps" layoutX="120.0" layoutY="180.0" mnemonicParsing="false" onAction="#CMSeeMaps" prefHeight="25.0" prefWidth="189.0" text="See Maps" />
+      <Button fx:id="CMcreateCity" layoutX="120.0" layoutY="220.0" mnemonicParsing="false" onAction="#CMcreateCity" prefHeight="25.0" prefWidth="189.0" text="Create City" />
+      <Button fx:id="CMeditInterestingPlace" layoutX="420.0" layoutY="300.0" mnemonicParsing="false" onAction="#CMeditInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Edit Interesting Place" />
+      <Button fx:id="CMaddInterestingPlace" layoutX="420.0" layoutY="260.0" mnemonicParsing="false" onAction="#CMaddInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Add Interesting Place" />
+      <Button fx:id="CMeditPath" layoutX="420.0" layoutY="220.0" mnemonicParsing="false" onAction="#CMeditPath" prefHeight="25.0" prefWidth="189.0" text="Edit Path" />
+      <Button fx:id="CMaddPath" layoutX="420.0" layoutY="180.0" mnemonicParsing="false" onAction="#CMaddPath" prefHeight="25.0" prefWidth="189.0" text="Add Path" />
+      <Button fx:id="CMacceptVersion" layoutX="120.0" layoutY="340.0" mnemonicParsing="false" onAction="#CMacceptVersion" prefHeight="25.0" prefWidth="189.0" text="Accept Version" />
+      <Button fx:id="CMchangePrice" layoutX="120.0" layoutY="300.0" mnemonicParsing="false" onAction="#CMchangePrice" prefHeight="25.0" prefWidth="189.0" text="Change Price" />
+      <Button fx:id="seeUserReports" layoutX="420.0" layoutY="340.0" mnemonicParsing="false" onAction="#seeUserReports" prefHeight="25.0" prefWidth="189.0" text="SeeUsersReports" />
+      <Button fx:id="acceptPrice" layoutX="273.0" layoutY="405.0" mnemonicParsing="false" onAction="#acceptPrice" prefHeight="25.0" prefWidth="189.0" text="AcceptPrice" />
+   </children>
+</AnchorPane>

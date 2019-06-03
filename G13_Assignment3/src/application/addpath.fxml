@@ -7,6 +7,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
+
 <AnchorPane prefHeight="568.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddPath">
    <children>
       <ImageView fitHeight="568.0" fitWidth="919.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
@@ -33,5 +34,3 @@
             <Font name="Comic Sans MS Bold Italic" size="15.0" />
          </font>
       </Button>
-   </children>
-</AnchorPane>

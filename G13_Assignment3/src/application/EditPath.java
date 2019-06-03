@@ -10,11 +10,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 
-
 public class EditPath {
 
     @FXML // fx:id="enterPathId"
     private TextField enterPathId; // Value injected by FXMLLoader
+
 
     @FXML // fx:id="editDiscription"
     private TextField editDiscription; // Value injected by FXMLLoader
@@ -25,15 +25,18 @@ public class EditPath {
     @FXML
     void Editpath(ActionEvent event) {
 
+
     }
 
     @FXML
     void Editdesc(ActionEvent event) {
 
+
     }
 
     @FXML
     void back(ActionEvent event) {
+
 
     }
 

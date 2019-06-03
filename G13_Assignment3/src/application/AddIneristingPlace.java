@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 
 public class AddIneristingPlace {
 
+
     @FXML // fx:id="enterPlaceId"
     private TextField enterPlaceId; // Value injected by FXMLLoader
 
@@ -27,13 +28,16 @@ public class AddIneristingPlace {
     @FXML // fx:id="enterPathToPlace"
     private TextField enterPathToPlace; // Value injected by FXMLLoader
 
+
     @FXML // fx:id="enterPlaceName"
     private TextField enterPlaceName; // Value injected by FXMLLoader
+
 
     @FXML // fx:id="enterLocation"
     private TextField enterLocation; // Value injected by FXMLLoader
 
     @FXML
+
     void enterDiscription(ActionEvent event) {
 
     }
@@ -41,10 +45,12 @@ public class AddIneristingPlace {
     @FXML
     void Addbtn(ActionEvent event) {
 
+
     }
 
     @FXML
     void back(ActionEvent event) {
+
 
     }
 
