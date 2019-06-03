@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
 import java.util.*;
 import ocsf.server.*;
 import common.*;
+import models.*;
 
 /**
  * This class overrides some of the methods in the abstract superclass in order
@@ -77,10 +78,11 @@ public class EchoServer extends AbstractServer {
 	public EchoServer(int port, ChatIF serverUI) throws IOException {
 		super(port);
 		this.serverUI = serverUI;
+		///***sql***///
 		try {
 			Class.forName(JDBC_DRIVER);
 			conn = DriverManager.getConnection(DB_URL, USER, PASS);
-
+//**whire sql here**//
 		} catch (SQLException se) {
 			se.printStackTrace();
 			System.out.println("SQLException: " + se.getMessage());
@@ -142,112 +144,24 @@ public class EchoServer extends AbstractServer {
 				cvv = detail[7];
 				date = detail[8];
 				id = detail[9];
-				Statement stmt = null;
-				List<String> Email = new ArrayList<String>();
-				try {
-					stmt = conn.createStatement();
-					String sql = "SELECT * FROM CustomerCard";
-					ResultSet rs = stmt.executeQuery(sql);
-					while (rs.next()) {
-						Email.add(rs.getString("Email"));
-					}
-					if (email.equals("") || pass.equals("") || firstname.equals("") || lastname.equals("")
-							|| tel.equals("") || visa.equals("") || cvv.equals("") || date.equals("")
-							|| id.equals("")) {
-						JOptionPane.showMessageDialog(null, "One or more files are empty!! ");
-
-					} else if (Email.contains(email)) {
-
-						JOptionPane.showMessageDialog(null, "You are already registed ");
-
-					} else if (!(email.contains("@hotmail.com")) && !(email.contains("@gmail.com"))) {
-
-						JOptionPane.showMessageDialog(null, "Please enter correct mail ");
-
-					} else if (tel.length() != 10 || (!tel.matches("[0-9]+"))) {
-						JOptionPane.showMessageDialog(null, "Please enter correct phone number ");
-
-					} else if (visa.length() != 16 || (!visa.matches("[0-9]+"))) {
-						JOptionPane.showMessageDialog(null, "Please enter correct visa number ");
-
-					} else if (cvv.length() != 3 || (!cvv.matches("[0-9]+"))) {
-						JOptionPane.showMessageDialog(null, "Please enter correct cvv number ");
-
-					} else if (id.length() != 9 || (!id.matches("[0-9]+"))) {
-						JOptionPane.showMessageDialog(null, "Please enter correct id ");
-
-					} else if (date.length() != 5 || (!date.matches("(1[0-2]|0[1-9])/(2[0-9])"))) {
-						JOptionPane.showMessageDialog(null, "Please enter correct date number ");
-
-					} else {
-						this.handleMessageFromServerUI("SignUp");
-						JOptionPane.showMessageDialog(null, "You SignUp successfully ");
-					}
-					if ((!email.equals("") && !pass.equals("") && !firstname.equals("") && !lastname.equals("")
-							&& !tel.equals("") && !visa.equals("") && !cvv.equals("") && !date.equals("")
-							&& !id.equals(""))) {
-						PreparedStatement prep_stmt = conn.prepareStatement(
-								"INSERT INTO CustomerCard " + "VALUES(?, ?, ?,?, ?, ?, ?, ?, ?, '1')");
-						prep_stmt.setString(1, email);
-						prep_stmt.setString(2, pass);
-						prep_stmt.setString(3, firstname);
-						prep_stmt.setString(4, lastname);
-						prep_stmt.setString(5, tel);
-						prep_stmt.setString(6, visa);
-						prep_stmt.setString(7, cvv);
-						prep_stmt.setString(8, date);
-						prep_stmt.setString(9, id);
-						prep_stmt.executeUpdate();
-					}
-
-				} catch (SQLException se) {
-					se.printStackTrace();
-					System.out.println("SQLException: " + se.getMessage());
-					System.out.println("SQLState: " + se.getSQLState());
-					System.out.println("VendorError: " + se.getErrorCode());
-				} catch (Exception e) {
-					e.printStackTrace();
+				boolean result= Person.register(firstname, lastname, tel, email,pass, visa,cvv,date,id);
+				if (result == true) {
+				 this.handleMessageFromServerUI("SignUp");
+					JOptionPane.showMessageDialog(null, "You SignUp successfully ");
 				}
+
 
 				break;
 			case "SignIn":
 				email = detail[1];
 				pass = detail[2];
-				String useremail = null;
-				String userpass = null;
-				try {
-					PreparedStatement prep_stmt = conn.prepareStatement("SELECT * FROM CustomerCard WHERE Email=?");
-					prep_stmt.setString(1, email);
-					ResultSet rs = prep_stmt.executeQuery();
-					while (rs.next()) {
-						useremail = rs.getString("Email");
-						userpass = rs.getString("password");
-					}
-					if (email == null || pass == null) {
-						JOptionPane.showMessageDialog(null, "One or more files are empty!! ");
-
-					} else if (useremail == null) {
-						JOptionPane.showMessageDialog(null, "You are not registed !!");
-					} else if (useremail != null) {
-						if (!(userpass.equals(pass))) {
-							JOptionPane.showMessageDialog(null, "You entered uncorrect password !!");
-
-						} else {
-							this.handleMessageFromServerUI("SignIn");
-
-						}
-					}
-
-				} catch (SQLException se) {
-					se.printStackTrace();
-					System.out.println("SQLException: " + se.getMessage());
-					System.out.println("SQLState: " + se.getSQLState());
-					System.out.println("VendorError: " + se.getErrorCode());
-				} catch (Exception e) {
-					e.printStackTrace();
+				if(Client.SignIn(email,pass)==true) {
+				this.handleMessageFromServerUI("SignIn");
 				}
+
 				break;
 			case "PublicSearch":
+				break;
 			
 			}
 //			System.out.println("Message received: " + msg + " from \"" + client.getInfo("loginID") + "\" " + client);

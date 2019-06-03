@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.media.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.shape.*?>
@@ -13,27 +14,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane prefHeight="568.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Button fx:id="login" layoutX="682.0" layoutY="32.0" mnemonicParsing="false" onAction="#log" prefHeight="31.0" prefWidth="74.0" text="Sign In">
+      <ImageView fitHeight="568.0" fitWidth="919.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../שנה%204/סמסטר%20ב/הנדסת%20תוכנה/world-map-background-copy.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="register" layoutX="646.0" layoutY="46.0" mnemonicParsing="false" onAction="#regist" text="Sign Up">
          <font>
-            <Font name="System Bold Italic" size="15.0" />
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="register" layoutX="595.0" layoutY="32.0" mnemonicParsing="false" onAction="#regist" text="Sign Up">
+      <Button fx:id="login" layoutX="749.0" layoutY="46.0" mnemonicParsing="false" onAction="#log" prefHeight="31.0" prefWidth="74.0" text="Sign In">
          <font>
-            <Font name="System Bold Italic" size="15.0" />
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
          </font>
       </Button>
-      <TextField fx:id="search" alignment="BASELINE_LEFT" layoutX="150.0" layoutY="285.0" onAction="#Search" prefHeight="25.0" prefWidth="487.0" promptText="You Can Search Map by City Name , Discription , Location">
+      <Text fontSmoothingType="LCD" layoutX="192.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To Map's Web" textAlignment="CENTER" wrappingWidth="438.13671875">
          <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </TextField>
-      <Text fontSmoothingType="LCD" layoutX="169.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To Map's  Web" textAlignment="CENTER" wrappingWidth="438.13671875">
-         <font>
-            <Font name="System Bold Italic" size="36.0" />
+            <Font name="Comic Sans MS Bold" size="34.0" />
          </font>
       </Text>
+      <TextField fx:id="search" layoutX="204.0" layoutY="284.0" onAction="#Search" prefHeight="25.0" prefWidth="427.0" promptText="You Can Search Map by City Name , Discription , Location" />
    </children>
 </AnchorPane>

@@ -4,8 +4,11 @@
 
 package application;
 
-import javax.swing.JOptionPane;
+import java.io.File;
 import java.io.IOException;
+
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,42 +17,34 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import javafx.scene.control.TextField;
-
 public class AddMapToCity {
+    @FXML // fx:id="Path"
+    private Button Path; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="path"
+    private TextField path; // Value injected by FXMLLoader
 
-    @FXML // fx:id="addMapToCity_btn"
-    private Button addMapToCity_btn; // Value injected by FXMLLoader
+    @FXML // fx:id="VersionNum"
+    private TextField VersionNum; // Value injected by FXMLLoader
 
-    @FXML // fx:id="IdToNewMap"
-    private TextField IdToNewMap; // Value injected by FXMLLoader
+    @FXML // fx:id="CityId"
+    private TextField CityId; // Value injected by FXMLLoader
 
-    @FXML // fx:id="descriptionToNewMap"
-    private TextField descriptionToNewMap; // Value injected by FXMLLoader
+    @FXML // fx:id="description"
+    private TextField description; // Value injected by FXMLLoader
 
-    @FXML // fx:id="pathToNewMap"
-    private TextField pathToNewMap; // Value injected by FXMLLoader
+    @FXML // fx:id="addMapToCity"
+    private Button addMapToCity; // Value injected by FXMLLoader
 
-    @FXML // fx:id="VersionNumToNewMap"
-    private TextField VersionNumToNewMap; // Value injected by FXMLLoader
-
-    @FXML // fx:id="enterCityName"
-    private TextField enterCityName; // Value injected by FXMLLoader
-
-    @FXML
-    void enterCityNameToAddMap(ActionEvent event) {
-
-    }
+    @FXML // fx:id="MapId"
+    private TextField MapId; // Value injected by FXMLLoader
 
     @FXML
-    void enterPathToNewMap(ActionEvent event) {
-
-    }
-
-    @FXML
-    void addMapToCity_btn(ActionEvent event) throws IOException {
+    void add(ActionEvent event) throws IOException {
     	JOptionPane.showMessageDialog(null, "Adding Map Finished Successfully");
      	Parent pane= FXMLLoader.load(getClass().getResource("employeeHomePage.fxml"));
         Scene log=new Scene(pane);
@@ -60,21 +55,43 @@ public class AddMapToCity {
     }
 
     @FXML
-    void descriptionToNewMap(ActionEvent event) {
-
+    void back(ActionEvent event) throws IOException {
+    	  Parent pane= FXMLLoader.load(getClass().getResource("employeeHomePage.fxml"));
+          Scene log=new Scene(pane);
+          Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+          app_Stage.setScene(log);
+          app_Stage.show();
     }
-
     @FXML
-    void VersionNumToNewMap(ActionEvent event) {
+    void Path_dir(ActionEvent event) {
+    	 JFileChooser chooser=new JFileChooser();
+    	 chooser.showOpenDialog(null);
+    	 File f =chooser.getSelectedFile();
+    	 String filename=f.getAbsolutePath();
+    	 path.setText(filename);
 
-    }
-
-    @FXML
-    void IdToNewMap(ActionEvent event) {
-
+    	
+    	
+//FileChooser filechooser=new FileChooser();
+//filechooser.setTitle("Open File Dialog");
+//Stage app_Stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+//filechooser.showOpenDialog(app_Stage);
+//if(filechooser !=null)
+//{
+//	 JFileChooser chooser=new JFileChooser();
+//	 File f =chooser.getSelectedFile();
+//	 String filename=f.getAbsolutePath();
+//	path.setText(filename);
+//
+//
+//    }
     }
 
 }
+
+
+
+ 
 
 
 

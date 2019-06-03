@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,21 +10,42 @@
 
 <AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Connect">
    <children>
-      <Text layoutX="268.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome" textAlignment="CENTER" wrappingWidth="234.13671875">
+      <ImageView fitHeight="615.0" fitWidth="830.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../שנה%204/סמסטר%20ב/הנדסת%20תוכנה/connection.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.17" contrast="-0.19" hue="-0.02" />
+         </effect>
+      </ImageView>
+      <Button layoutX="31.0" layoutY="166.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="295.0" text=" connect as server">
          <font>
-            <Font name="System Bold Italic" size="44.0" />
-         </font>
-      </Text>
-      <Button fx:id="server" layoutX="245.0" layoutY="224.0" mnemonicParsing="false" onAction="#connectserver" prefHeight="39.0" prefWidth="295.0" text="click to connect as server">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="246.0" layoutY="286.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="295.0" text="write host to connect as Client">
-         <font>
-            <Font size="18.0" />
+            <Font name="Comic Sans MS Bold Italic" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="conclient" layoutX="246.0" layoutY="353.0" onAction="#connectclient" prefHeight="25.0" prefWidth="295.0" promptText="host number" />
+      <Button layoutX="493.0" layoutY="166.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="295.0" text=" connect as Client">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="host" layoutX="493.0" layoutY="262.0" prefHeight="25.0" prefWidth="295.0" promptText="write host number">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="port" layoutX="31.0" layoutY="262.0" prefHeight="25.0" prefWidth="295.0" promptText="port number: 5555 ">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </TextField>
+      <Button layoutX="122.0" layoutY="334.0" mnemonicParsing="false" onAction="#connectserver" text="press to confirm">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="584.0" layoutY="334.0" mnemonicParsing="false" onAction="#connectclient" text="press to confirm">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

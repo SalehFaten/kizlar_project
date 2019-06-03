@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddMapToCity">
+<AnchorPane prefHeight="568.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddMapToCity">
    <children>
-      <TextField fx:id="enterCityName" alignment="CENTER" layoutX="334.0" layoutY="96.0" onAction="#enterCityNameToAddMap" promptText="Enter City Name" />
-      <TextField fx:id="pathToNewMap" alignment="CENTER" layoutX="104.0" layoutY="179.0" onAction="#enterPathToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Path To The New Map" />
-      <Button fx:id="addMapToCity_btn" layoutX="393.0" layoutY="411.0" mnemonicParsing="false" onAction="#addMapToCity_btn" text="Add" />
-      <TextField fx:id="descriptionToNewMap" alignment="CENTER" layoutX="105.0" layoutY="271.0" onAction="#descriptionToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Description To The New Map" />
-      <TextField fx:id="VersionNumToNewMap" alignment="CENTER" layoutX="437.0" layoutY="272.0" onAction="#VersionNumToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Version Num " />
-      <TextField fx:id="IdToNewMap" alignment="CENTER" layoutX="435.0" layoutY="179.0" onAction="#IdToNewMap" prefHeight="32.0" prefWidth="225.0" promptText="Enter Map Id" />
+      <ImageView fitHeight="568.0" fitWidth="919.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../שנה%204/סמסטר%20ב/הנדסת%20תוכנה/world-map-background-copy.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="CityId" alignment="CENTER" layoutX="301.0" layoutY="155.0" prefHeight="32.0" prefWidth="225.0" promptText="Enter City Id" />
+      <Text layoutX="262.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Map To City">
+         <font>
+            <Font name="Comic Sans MS Bold" size="39.0" />
+         </font>
+      </Text>
+      <Button layoutX="63.0" layoutY="50.0" mnemonicParsing="false" onAction="#back" text="back">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="MapId" alignment="CENTER" layoutX="301.0" layoutY="210.0" prefHeight="32.0" prefWidth="225.0" promptText="Enter Map Id" />
+      <TextField fx:id="VersionNum" alignment="CENTER" layoutX="301.0" layoutY="311.0" prefHeight="32.0" prefWidth="225.0" promptText="Enter Version Num " />
+      <TextField fx:id="description" alignment="CENTER" layoutX="301.0" layoutY="260.0" prefHeight="32.0" prefWidth="225.0" promptText="Enter Description To The New Map" />
+      <Button fx:id="addMapToCity" layoutX="389.0" layoutY="482.0" mnemonicParsing="false" onAction="#add" text="Add">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="path" alignment="CENTER" layoutX="301.0" layoutY="415.0" prefHeight="32.0" prefWidth="225.0" promptText="map location " />
+      <Button fx:id="Path" layoutX="301.0" layoutY="365.0" mnemonicParsing="false" onAction="#Path_dir" prefHeight="32.0" prefWidth="225.0" text="Select To Enter Path" />
    </children>
 </AnchorPane>

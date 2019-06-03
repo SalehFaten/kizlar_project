@@ -1,19 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="556.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employeeHomePage">
+<AnchorPane prefHeight="568.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employeeHomePage">
    <children>
-      <Button fx:id="outEmploeeHome" layoutX="672.0" layoutY="58.0" mnemonicParsing="false" onAction="#LogOut" text="LogOut" />
-      <Button fx:id="addMapToCity" layoutX="119.0" layoutY="305.0" mnemonicParsing="false" onAction="#addMapToCity" prefHeight="25.0" prefWidth="189.0" text="Add Map To City" />
-      <Button fx:id="employeeSeeMaps" layoutX="119.0" layoutY="213.0" mnemonicParsing="false" onAction="#employeeSeeMaps" prefHeight="25.0" prefWidth="189.0" text="See Maps" />
-      <Button fx:id="createCity" layoutX="116.0" layoutY="256.0" mnemonicParsing="false" onAction="#createCity" prefHeight="25.0" prefWidth="189.0" text="Create City" />
-      <Button fx:id="editInterestingPlace" layoutX="424.0" layoutY="328.0" mnemonicParsing="false" onAction="#editInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Edit Interesting Place" />
-      <Button fx:id="addInterestingPlace" layoutX="424.0" layoutY="274.0" mnemonicParsing="false" onAction="#addInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Add Interesting Place" />
-      <Button fx:id="editPath" layoutX="424.0" layoutY="226.0" mnemonicParsing="false" onAction="#editPath" prefHeight="25.0" prefWidth="189.0" text="Edit Path" />
-      <Button fx:id="addPath" layoutX="424.0" layoutY="181.0" mnemonicParsing="false" onAction="#addPath" prefHeight="25.0" prefWidth="189.0" text="Add Path" />
+      <ImageView fitHeight="568.0" fitWidth="919.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../שנה%204/סמסטר%20ב/הנדסת%20תוכנה/world-map-background-copy.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="282.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Settings" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="40.0" />
+         </font>
+      </Text>
+      <Button fx:id="addPath" layoutX="164.0" layoutY="338.0" mnemonicParsing="false" onAction="#addPath" prefHeight="25.0" prefWidth="189.0" text="Add Path">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="editPath" layoutX="434.0" layoutY="211.0" mnemonicParsing="false" onAction="#editPath" prefHeight="25.0" prefWidth="189.0" text="Edit Path">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="addInterestingPlace" layoutX="434.0" layoutY="272.0" mnemonicParsing="false" onAction="#addInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Add Interesting Place">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="editInterestingPlace" layoutX="434.0" layoutY="338.0" mnemonicParsing="false" onAction="#editInterestingPlace" prefHeight="25.0" prefWidth="189.0" text="Edit Interesting Place">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="createCity" layoutX="164.0" layoutY="211.0" mnemonicParsing="false" onAction="#createCity" prefHeight="25.0" prefWidth="189.0" text="Create City">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="employeeSeeMaps" layoutX="164.0" layoutY="391.0" mnemonicParsing="false" onAction="#employeeSeeMaps" prefHeight="25.0" prefWidth="459.0" text="See Maps">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="addMapToCity" layoutX="164.0" layoutY="272.0" mnemonicParsing="false" onAction="#addMapToCity" prefHeight="25.0" prefWidth="189.0" text="Add Map To City">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="outEmploeeHome" layoutX="682.0" layoutY="68.0" mnemonicParsing="false" onAction="#LogOut" text="LogOut">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

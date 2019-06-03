@@ -9,13 +9,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+
+
 public class EditInteristingPlace {
 
     @FXML // fx:id="EditDescription"
     private TextField EditDescription; // Value injected by FXMLLoader
-
-    @FXML // fx:id="Editbtn"
-    private Button Editbtn; // Value injected by FXMLLoader
 
     @FXML // fx:id="EditPlaceName"
     private TextField EditPlaceName; // Value injected by FXMLLoader
@@ -30,22 +29,12 @@ public class EditInteristingPlace {
     private TextField EditRecomendedTime; // Value injected by FXMLLoader
 
     @FXML
-    void Editbtn(ActionEvent event) {
+    void Editname(ActionEvent event) {
 
     }
 
     @FXML
     void EditDescription(ActionEvent event) {
-
-    }
-
-    @FXML
-    void EditLocation(ActionEvent event) {
-
-    }
-
-    @FXML
-    void EditPlaceName(ActionEvent event) {
 
     }
 
@@ -56,6 +45,16 @@ public class EditInteristingPlace {
 
     @FXML
     void EditRecomendedTime(ActionEvent event) {
+
+    }
+
+    @FXML
+    void EditLocation(ActionEvent event) {
+
+    }
+
+    @FXML
+    void back(ActionEvent event) {
 
     }
 
